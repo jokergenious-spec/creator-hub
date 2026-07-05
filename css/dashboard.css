@@ -1,0 +1,24 @@
+.header h1 {
+  margin: 0 0 4px;
+  font-size: 2rem;
+}
+
+.header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.welcome-card h2 {
+  margin-top: 0;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.card span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
