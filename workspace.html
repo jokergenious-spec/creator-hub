@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Workspace</title>
+
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div id="app">
+
+<header class="top-header">
+
+<button id="backBtn">← Back</button>
+
+<h1 id="workspaceTitle">Workspace</h1>
+
+<p id="workspaceType">YouTube Channel</p>
+
+</header>
+
+<main>
+
+<div class="workspace-tabs">
+  <button class="tab-btn active" data-view="overview">Overview</button>
+  <button class="tab-btn" data-view="outline">Outline</button>
+  <button class="tab-btn" data-view="script">Script</button>
+  <button class="tab-btn" data-view="storyboard">Storyboard</button>
+  <button class="tab-btn" data-view="images">Images</button>
+  <button class="tab-btn" data-view="assets">Assets</button>
+  <button class="tab-btn" data-view="characters">Characters</button>
+  <button class="tab-btn" data-view="export">Export</button>
+</div>
+
+<section class="workspace-detail">
+
+<div class="workspace-header" data-view-content="overview">
+
+<h2>Workspace</h2>
+
+<hr>
+
+<h3 id="workspaceHeading">Workspace</h3>
+
+<p id="workspaceDetailType">YouTube Channel</p>
+
+<button id="newScriptBtn" class="new-script-btn">+ New Script</button>
+
+<div class="kanban-section">
+  <div class="prompt-section-header">
+    <h3>Kanban Board</h3>
+    <p>Drag cards between stages</p>
+  </div>
+  <div id="kanbanBoard" class="kanban-board"></div>
+</div>
+
+</div>
+
+<div class="workspace-scripts" data-view-content="script">
+
+<h3>Scripts</h3>
+
+<div id="scriptsList"></div>
+
+</div>
+
+<div data-view-content="outline" class="workspace-panel">
+  <h3>Outline</h3>
+  <p>Coming soon.</p>
+</div>
+
+<div data-view-content="storyboard" class="workspace-panel">
+  <h3>Storyboard</h3>
+  <p>Coming soon.</p>
+</div>
+
+<div data-view-content="images" class="workspace-panel">
+  <h3>Images</h3>
+  <p>Coming soon.</p>
+</div>
+
+<div data-view-content="assets" class="workspace-panel">
+  <div class="prompt-section-header">
+    <h3>Assets</h3>
+    <button id="uploadAssetBtn" class="new-script-btn" type="button">⬆ Upload</button>
+  </div>
+  <input id="assetSearch" type="text" placeholder="Search assets" />
+  <div id="assetCategories" class="asset-categories"></div>
+  <div id="assetDropZone" class="asset-drop-zone">Drag & Drop files here</div>
+  <div id="assetList"></div>
+</div>
+
+<div data-view-content="characters" class="workspace-panel">
+  <div class="prompt-section-header">
+    <h3>Characters</h3>
+    <button id="addCharacterBtn" class="new-script-btn" type="button">+ Add Character</button>
+  </div>
+  <div id="characterList"></div>
+</div>
+
+<div data-view-content="export" class="workspace-panel">
+  <h3>Export</h3>
+  <div class="export-actions">
+    <button class="export-btn" data-export="outline">Export Outline</button>
+    <button class="export-btn" data-export="script">Export Script</button>
+    <button class="export-btn" data-export="storyboard">Export Storyboard</button>
+    <button class="export-btn" data-export="images">Export Image Prompts</button>
+    <button class="export-btn primary" data-export="json">Export Everything (.json)</button>
+  </div>
+</div>
+
+</section>
+
+<div id="scriptModal" class="modal hidden">
+
+<div class="modal-content">
+
+<h2>Create Script</h2>
+
+<input type="text" id="scriptTitle" placeholder="Title" />
+
+<select id="scriptStatus">
+
+<option>Draft</option>
+
+<option>Finished</option>
+
+</select>
+
+<div class="modal-buttons">
+
+<button id="cancelScriptBtn">Cancel</button>
+
+<button id="createScriptBtn">Create</button>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+<script src="js/scripts.js"></script>
+<script src="js/characters.js"></script>
+<script src="js/asset-manager.js"></script>
+<script src="js/workspace.js"></script>
+
+</body>
+
+</html>

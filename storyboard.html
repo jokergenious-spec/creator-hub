@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Storyboard</title>
+  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="top-header">
+      <button id="backBtn">← Back</button>
+      <h1 id="storyboardTitle">Storyboard</h1>
+      <p id="storyboardStatus">Draft</p>
+    </header>
+
+    <main>
+      <section class="storyboard-editor">
+        <div class="prompt-section-header">
+          <h3>Scenes</h3>
+          <button id="addSceneBtn" type="button">+ Add Scene</button>
+        </div>
+        <div id="sceneList"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/storyboard.js"></script>
+</body>
+</html>

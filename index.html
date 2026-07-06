@@ -17,7 +17,7 @@
       <main>
         <section class="welcome-card">
           <h2>👋 Welcome Back</h2>
-          <p>Let's build something amazing today.</p>
+          <p>Create workspaces, scripts, storyboards, and image prompts from one place.</p>
         </section>
 
         <section class="stats">
@@ -41,6 +41,59 @@
             <span>0</span>
           </div>
         </section>
+
+        <section class="workspace-section">
+          <div class="section-title">
+            <h2>Workspaces</h2>
+            <button id="addWorkspaceBtn">+ Add</button>
+          </div>
+
+          <div class="dashboard-panel">
+            <div class="dashboard-panel-header">
+              <h3>Search</h3>
+            </div>
+            <input id="globalSearchInput" type="text" placeholder="Search every script, prompt, or workspace" />
+            <div id="searchResults" class="search-results"></div>
+          </div>
+
+          <div class="dashboard-panel">
+            <div class="dashboard-panel-header">
+              <h3>Weekly Upload Calendar</h3>
+            </div>
+            <div id="calendarGrid" class="calendar-grid"></div>
+          </div>
+
+          <div class="dashboard-panel">
+            <div class="dashboard-panel-header">
+              <h3>Tags</h3>
+            </div>
+            <div class="tag-list">
+              <button class="tag-chip" type="button">History</button>
+              <button class="tag-chip" type="button">Finance</button>
+              <button class="tag-chip" type="button">Crime</button>
+              <button class="tag-chip" type="button">Still Blue</button>
+              <button class="tag-chip" type="button">Long Shorts</button>
+            </div>
+          </div>
+
+          <div id="workspaceList"></div>
+        </section>
+        <!-- Workspace Modal -->
+        <div id="workspaceModal" class="modal hidden">
+          <div class="modal-content">
+            <h2>Create Workspace</h2>
+            <input type="text" id="workspaceName" placeholder="Workspace Name" />
+            <select id="workspaceType">
+              <option>YouTube Channel</option>
+              <option>Business</option>
+              <option>Personal</option>
+            </select>
+            <div class="modal-buttons">
+              <button id="cancelBtn">Cancel</button>
+              <button id="createBtn">Create</button>
+            </div>
+          </div>
+        </div>
       </main>
 
       <nav class="bottom-nav">
@@ -52,7 +105,8 @@
       </nav>
     </div>
 
-    <script src="js/storage.js"></script>
-    <script src="js/app.js"></script>
+   <script src="js/storage.js"></script>
+<script src="js/workspaces.js"></script>
+<script src="js/app.js"></script>
   </body>
 </html>

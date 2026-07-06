@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Script Editor</title>
+  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="top-header">
+      <button id="backBtn">← Back</button>
+      <h1 id="scriptTitle">Script</h1>
+      <p id="scriptStatus">Draft</p>
+    </header>
+
+    <main>
+      <section class="script-editor">
+        <div class="editor-section">
+          <label>Title</label>
+          <textarea id="scriptInputTitle"></textarea>
+        </div>
+
+        <div class="editor-section">
+          <label>Hook</label>
+          <textarea id="scriptHook"></textarea>
+        </div>
+
+        <div class="editor-section">
+          <label>Act 1</label>
+          <textarea id="scriptAct1"></textarea>
+        </div>
+
+        <div class="editor-section">
+          <label>Act 2</label>
+          <textarea id="scriptAct2"></textarea>
+        </div>
+
+        <div class="editor-section">
+          <label>Act 3</label>
+          <textarea id="scriptAct3"></textarea>
+        </div>
+
+        <div class="editor-section">
+          <label>Ending</label>
+          <textarea id="scriptEnding"></textarea>
+        </div>
+
+        <div class="editor-section">
+          <label>Notes</label>
+          <textarea id="scriptNotes"></textarea>
+        </div>
+
+        <section class="prompt-section">
+          <div class="prompt-section-header">
+            <h3>Prompt Library</h3>
+          </div>
+          <div id="promptLibraryList" class="prompt-library-list"></div>
+        </section>
+
+        <section class="prompt-section">
+          <div class="prompt-section-header">
+            <h3>Image Prompts</h3>
+            <button id="addPromptBtn" type="button">+ Add Prompt</button>
+          </div>
+          <div id="promptList"></div>
+        </section>
+
+        <button id="saveScriptBtn">Save</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
